@@ -21,14 +21,14 @@ export function MainLayout({
         <title>{getPageTitle(title)}</title>
       </Head>
       <Container className="flex flex-col min-h-screen">
-        <nav className="py-2 mb-2">
+        <section className="flex-grow pt-4 grid content-center">
+          {children}
+        </section>
+        <footer className="py-8 text-right">
           <Typography variant="h1" className="opacity-25 break-all">
             {title}
           </Typography>
-        </nav>
-        <section className="flex-grow pb-4 grid content-center">
-          {children}
-        </section>
+        </footer>
       </Container>
     </div>
   );
