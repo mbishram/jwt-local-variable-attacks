@@ -4,6 +4,7 @@ const colors = require("tailwindcss/colors");
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    // When changing screens, update "./src/constants/tailwind-breakpoints" TAILWIND_BREAKPOINTS too.
     screens: {
       sm: "640px",
       md: "768px",

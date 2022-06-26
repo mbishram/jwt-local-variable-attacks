@@ -2,7 +2,7 @@ import { HTMLProps } from "react";
 import clsx from "clsx";
 import { Container } from "@/components/ui/Container";
 import { Typography } from "@/components/ui/Typography";
-import { getPageTitle } from "@/utils/page-utils";
+import { getPageTitle } from "@/libs/utils/page.utils";
 import Head from "next/head";
 import { Home } from "react-feather";
 import Link from "next/link";
