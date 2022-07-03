@@ -25,7 +25,7 @@ export function MainLayout({
         <title>{getPageTitle(title)}</title>
       </Head>
       <Container className="flex flex-col min-h-screen">
-        <section className="flex-grow py-4 grid content-center">
+        <section className="flex-grow py-6 grid content-center">
           {children}
         </section>
         {title && (
