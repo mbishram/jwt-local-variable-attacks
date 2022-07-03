@@ -1,4 +1,4 @@
-import { NextJSON } from "@/models/next-json";
+import { NextJsonModels } from "@/models/next-json.models";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export type InvalidMethodOptions = { allowMethod: string[] };
@@ -12,7 +12,7 @@ export const invalidMethod = (
   const { allowMethod } = options;
   res.setHeader("Access-Control-Allow-Methods", allowMethod || "*");
   return res.status(405).json(
-    new NextJSON({
+    new NextJsonModels({
       success: false,
       message: `Method ${method} Not Allowed`,
     })

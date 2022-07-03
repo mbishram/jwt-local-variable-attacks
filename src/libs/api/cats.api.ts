@@ -1,10 +1,25 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { catsHTTPInstance } from "@/libs/crud/instances.crud";
+import { NextJsonModels } from "@/models/next-json.models";
+import { CatsModels } from "@/models/cats.models";
 
 export async function getCats(req: NextApiRequest, res: NextApiResponse) {
   const LIMIT = 10;
-  // TODO: Change this to the real api
   const { data } = await catsHTTPInstance.get(`/images/search?limit=${LIMIT}`);
-  console.log("_TST", data);
-  return res.json(200);
+
+  if (!data) {
+    return res
+      .status(500)
+      .json(
+        new NextJsonModels({ success: false, message: "Something went wrong!" })
+      );
+  }
+
+  return res.status(200).json(
+    new NextJsonModels<CatsModels[]>({
+      success: true,
+      message: "Fetch success!",
+      data: data,
+    })
+  );
 }

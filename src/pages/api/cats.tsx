@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { FETCH_METHODS } from "@/constants/fetch-methods";
+import { FETCH_METHODS } from "@/constants/http.contants";
 import { invalidMethod } from "@/libs/utils/http.utils";
 import { getCats } from "@/libs/api/cats.api";
 

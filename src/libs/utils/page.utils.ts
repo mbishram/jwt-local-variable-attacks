@@ -1,7 +1,7 @@
 import {
   TAILWIND_BREAKPOINTS,
   TailwindBreakpointsKey,
-} from "@/constants/tailwind-breakpoints";
+} from "@/constants/ui.contants";
 
 export function getPageTitle(pageName?: string) {
   return (
