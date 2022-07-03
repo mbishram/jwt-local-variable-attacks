@@ -25,15 +25,15 @@ export function MainLayout({
         <title>{getPageTitle(title)}</title>
       </Head>
       <Container className="flex flex-col min-h-screen">
-        <section className="flex-grow pt-4 grid content-center">
+        <section className="flex-grow py-4 grid content-center">
           {children}
         </section>
         {title && (
-          <footer className="py-8 text-right">
+          <footer className="pb-8 text-right">
             <Typography variant="h1">
               {!noHomeButton && (
                 <Link href="/">
-                  <a className="inline-flex content-end mr-4 opacity-25 hover:opacity-100 transition-all">
+                  <a className="inline-flex mr-4 opacity-25 hover:opacity-100 transition-all">
                     <Home size="2rem" />
                   </a>
                 </Link>
