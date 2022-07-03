@@ -4,8 +4,11 @@ import { NextJsonModels } from "@/models/next-json.models";
 import { CatsModels } from "@/models/cats.models";
 
 export async function getCats(req: NextApiRequest, res: NextApiResponse) {
-  const LIMIT = 10;
-  const { data } = await catsHTTPInstance.get(`/images/search?limit=${LIMIT}`);
+  const LIMIT = 24;
+  const SIZE = "med";
+  const { data } = await catsHTTPInstance.get(
+    `/images/search?limit=${LIMIT}&size=${SIZE}`
+  );
 
   if (!data) {
     return res

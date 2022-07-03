@@ -1,1 +1,1 @@
-export type CatsModels = { id: string; url: string };
+export type CatsModels = { height: string; id: string; url: string };
