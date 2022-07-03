@@ -71,7 +71,7 @@ const CSRF: NextPage = () => {
           </div>
         </>
       ) : (
-        <p className="text-center">Your cats are on it's way...</p>
+        <p className="text-center">Your cats are on it&apos;s way...</p>
       )}
     </MainLayout>
   );
