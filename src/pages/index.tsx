@@ -12,8 +12,7 @@ const Home: NextPage = () => {
           description={(Hovered) => (
             <>
               List of <Hovered>scripts</Hovered> used to test Reflected and
-              Stored <Hovered>Cross-Site Scripting</Hovered> Attacks and it's{" "}
-              <Hovered>result</Hovered>.
+              Stored <Hovered>Cross-Site Scripting</Hovered> Attacks.
             </>
           )}
         />
