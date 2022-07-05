@@ -5,7 +5,7 @@ import { NavCard } from "@/components/ui/NavCard";
 const Home: NextPage = () => {
   return (
     <MainLayout title="Dashboard" noHomeButton>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center max-w-screen-md mx-auto">
         <NavCard
           href="/xss"
           header="XSS Scripts"
@@ -24,16 +24,6 @@ const Home: NextPage = () => {
               <Hovered>Controlled page</Hovered> disguised as a web that shows a
               picture of cats. It is used to test{" "}
               <Hovered>Cross-Site Request Forgery</Hovered> Attacks.
-            </>
-          )}
-        />
-        <NavCard
-          href="/results"
-          header="Results"
-          description={(Hovered) => (
-            <>
-              Show all <Hovered>Payloads</Hovered> received from{" "}
-              <Hovered>XSS and CSRF</Hovered> Attacks.
             </>
           )}
         />
