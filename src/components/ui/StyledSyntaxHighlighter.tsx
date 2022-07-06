@@ -5,7 +5,7 @@ import clsx from "clsx";
 
 export type StyledSyntaxHighlighterProps = Omit<
   SyntaxHighlighterProps,
-  "language" | "style" | "showLineNumbers" | "wrapLongLines"
+  "language" | "style" | "showLineNumbers"
 > &
   Pick<HTMLProps<HTMLDivElement>, "className">;
 
@@ -22,7 +22,6 @@ export function StyledSyntaxHighlighter({
         style={materialDark}
         customStyle={{ margin: 0, ...customStyle }}
         showLineNumbers
-        wrapLongLines
         {...props}
       >
         {children}
