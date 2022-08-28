@@ -2,17 +2,17 @@ import { NextPage } from "next";
 import { MainLayout } from "@/components/layouts/MainLayout";
 import { Typography } from "@/components/ui/Typography";
 import { StyledSyntaxHighlighter } from "@/components/ui/StyledSyntaxHighlighter";
-import { XSS_SCRIPT } from "@/libs/attacks/xss";
+import { CSRF_SCRIPT } from "@/libs/attacks/csrf-scripts";
 
-const XSS: NextPage = () => {
+const CSRFScripts: NextPage = () => {
   return (
-    <MainLayout title="XSS">
+    <MainLayout title="CSRF Script">
       <Typography variant="h2" className="mb-4">
-        XSS Script
+        CSRF Script
       </Typography>
-      <StyledSyntaxHighlighter>{XSS_SCRIPT}</StyledSyntaxHighlighter>
+      <StyledSyntaxHighlighter>{CSRF_SCRIPT}</StyledSyntaxHighlighter>
     </MainLayout>
   );
 };
 
-export default XSS;
+export default CSRFScripts;

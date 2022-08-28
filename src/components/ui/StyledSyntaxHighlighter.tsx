@@ -18,7 +18,7 @@ export function StyledSyntaxHighlighter({
   return (
     <div className={clsx("rounded overflow-hidden", className)}>
       <Prism
-        language="javascript"
+        language="markdown"
         style={materialDark}
         customStyle={{ margin: 0, ...customStyle }}
         showLineNumbers

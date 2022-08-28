@@ -11,9 +11,9 @@ import Image from "next/image";
 import randomNumber from "lodash.random";
 import { IMAGE_HEIGHTS } from "@/constants/ui.contants";
 import clsx from "clsx";
-import { CSRFAttack } from "@/libs/attacks/csrf";
+import { CSRFAttackForm } from "@/libs/attacks/csrf-attack-form";
 
-const CSRF: NextPage = () => {
+const CSRFAttack: NextPage = () => {
   const [pictureOfCats, setPictureOfCats] = useState<CatsModels[]>([]);
   const { data, isValidating, mutate } = useSWR<NextJsonModels<CatsModels[]>>(
     GET_CATS,
@@ -39,8 +39,8 @@ const CSRF: NextPage = () => {
   }, [data]);
 
   return (
-    <MainLayout title="CSRF">
-      <CSRFAttack />
+    <MainLayout title="CSRF Attack">
+      <CSRFAttackForm />
       {!(pictureOfCats.length <= 0 && isValidating) ? (
         <>
           <CSRFMasonry>
@@ -79,4 +79,4 @@ const CSRF: NextPage = () => {
   );
 };
 
-export default CSRF;
+export default CSRFAttack;
