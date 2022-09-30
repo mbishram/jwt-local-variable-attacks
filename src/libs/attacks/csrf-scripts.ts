@@ -1,5 +1,7 @@
-export const CSRF_SCRIPT = `Want to see a picture of cats? <br />
-<a id="redirect-anchor" href="https://link.to/csrf-attack"><b>CLICK HERE!</b></a>
+export const getCSRFScriptString = (
+  attackerHost: string
+) => `Want to see a picture of cats? <br />
+<a id="redirect-anchor" href="${attackerHost}/csrf-attack"><b>CLICK HERE!</b></a>
 <script>
 	// Add redirectFrom search params
 	(() => {
