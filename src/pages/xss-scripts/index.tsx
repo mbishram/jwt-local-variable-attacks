@@ -9,7 +9,7 @@ import {
 import { ATTACKER_HOST } from "@/constants/http.contants";
 import { useIsDOMLoaded } from "@/libs/utils/page.utils";
 
-const XSSScripts: NextPage = () => {
+const Index: NextPage = () => {
   const isDOMLoaded = useIsDOMLoaded();
 
   if (isDOMLoaded && ATTACKER_HOST)
@@ -34,4 +34,4 @@ const XSSScripts: NextPage = () => {
   return null;
 };
 
-export default XSSScripts;
+export default Index;
